@@ -1,0 +1,64 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Hardware Store</title>
+
+</head>
+
+<body>
+    <div class="menu">
+        <div class="principal">
+            <div class="logo"><img src="{%static 'icons/logo.png'%}" alt=""></div>
+            <div><label for="search"></label><input id="search" type="search"></div>
+            <div class="user"><img src="{%static 'icons/user.png'%}" alt=""></div>
+        </div>
+        <div class="options">
+            <nav>
+                <ul>
+                    <li>vender</li>
+                    <li>historial</li>
+                    <li>favoritos</li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        <header>
+            <h2>CATEGORIES</h2>
+        </header>
+        <div class="products_1">
+            <div class="product">
+                <header>CPU</header>
+                <img src="{%static 'img/cpu.jpg'%}" alt="">
+            </div>
+            <div class="product">
+                <header>Graphics</header>
+                <img src="{%static 'img/gpu.jpg'%}" alt="">
+            </div>
+        </div>
+        <div>
+            <header>
+                <h2>OFFERS</h2>
+            </header>
+            <div class="offers">
+                <div class="itemOffer">
+                    <img src="{% static '/img/ssd.jpg'%}" alt="" class="img_description">
+                    <div class="price">$120.000</div>
+                    <div class="discount">20%</div>
+                    <div class="description">This is a description</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

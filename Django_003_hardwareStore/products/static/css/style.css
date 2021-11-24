@@ -1,0 +1,151 @@
+body {
+    background-color: #d6d6d2;
+}
+
+.menu {
+    font-family: Sspl;
+    background-color: black;
+    color: darkgray;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid darkgray;
+}
+
+.user {
+    width: 50px;
+    height: 50px;
+}
+
+.user img {
+    width: 100%;
+    height: 100%;
+}
+
+.options ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.options li {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.options li:hover {
+    cursor: pointer;
+    color: dimgray;
+}
+
+.products_1 {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 270px;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 120px;
+    font-family: Sspl;
+    text-align: center;
+}
+
+.product {
+    height: 95%;
+    width: 15%;
+    transition: 0.3s;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.product:hover {
+    transition: 0.4s;
+    width: 30%;
+}
+
+.offers {
+    display: flex;
+}
+
+.itemOffer {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 2%;
+    box-shadow: 0px 1px 2px 0px darkgray;
+    font-family: Rbold;
+    color: darkred;
+    font-size: 1.2rem;
+    overflow-y: hidden;
+}
+
+.itemOffer:hover {
+    scale: 1.02;
+    box-shadow: 0 1px 1px 1px gray;
+}
+
+.itemOffer img {
+    margin-top: 5%;
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom: 1px solid darkgray;
+}
+
+.discount {
+    margin-bottom: 60px;
+}
+
+.discount:hover {
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.discount {
+    color: green;
+}
+
+@font-face {
+    font-family: Sspl;
+    src: url("../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
+}
+
+@font-face {
+    font-family: Rbold;
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
