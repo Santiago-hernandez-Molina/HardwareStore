@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+      <div class="container">
+    <p>autenticacion</p>
+    <form method="POST" action="{% url "login" %}">
+     {% csrf_token %}
+        <input type="text" name="username"><br>
+        <input type="text" name="password">
+        <button type="submit">login </button>
+    </form>
+      {% if error %}
+          <h4>{{  error}}</h4>
+      {% endif  %}
+    </div>
+</body>
+</html>

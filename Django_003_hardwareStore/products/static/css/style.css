@@ -57,7 +57,12 @@ body {
     margin-left: 2%;
 }
 
-.options li:hover {
+.options li a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+.options li a:hover {
     cursor: pointer;
     color: dimgray;
 }

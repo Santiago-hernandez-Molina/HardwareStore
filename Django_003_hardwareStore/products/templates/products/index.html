@@ -22,9 +22,10 @@
         <div class="options">
             <nav>
                 <ul>
-                    <li>Sell</li>
-                    <li>History</li>
-                    <li>Favorites</li>
+                    <li><a href=""> Sell</a></li>
+                    <li><a href=""> History</a></li>
+                    <li><a href=""> Favorites</a></li>
+                    <li><a href="{%url 'logout' %}">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,12 +49,6 @@
                 <h2>OFFERS</h2>
             </header>
             <div class="offers">
-                <div class="itemOffer">
-                    <img src="{% static '/img/ssd.jpg'%}" alt="" class="img_description">
-                    <div class="price">$120.000</div>
-                    <div class="discount">20%</div>
-                    <div class="description">This is a description</div>
-                </div>
                 <div class="itemOffer">
                     <img src="{% static '/img/ssd.jpg'%}" alt="" class="img_description">
                     <div class="price">$120.000</div>
