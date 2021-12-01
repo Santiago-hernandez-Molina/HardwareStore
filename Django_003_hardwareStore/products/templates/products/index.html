@@ -1,64 +1,32 @@
-{% load static %}
-
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{%static 'css/style.css'%}">
-    <title>Hardware Store</title>
-
-</head>
-
-<body>
-    <div class="menu">
-        <div class="principal">
-            <div class="logo"><img src="{%static 'icons/logo.png'%}" alt=""></div>
-            <div><label for="search"></label><input id="search" type="search"></div>
-            <div class="user"><img src="{%static 'icons/user.png'%}" alt=""></div>
+{% extends 'products/masterTemplate.html' %} {% load static%} {% block body %}
+<div class="content">
+    <header>
+        <h2>CATEGORIES</h2>
+    </header>
+    <div class="products_1">
+        {%for item in list2%}
+        <div class="product">
+            <header>{{item.name}}</header>
+            <a href="{% url 'products:filter_by_category' item.id %}"><img src="/media/{{item.path}}" alt=""></a>
         </div>
-        <div class="options">
-            <nav>
-                <ul>
-                    <li><a href=""> Sell</a></li>
-                    <li><a href=""> History</a></li>
-                    <li><a href=""> Favorites</a></li>
-                    <li><a href="{%url 'logout' %}">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
+        {%endfor%}
     </div>
-    <div class="content">
+    <div>
         <header>
-            <h2>CATEGORIES</h2>
+            <h2>OFFERS</h2>
         </header>
-        <div class="products_1">
-            <div class="product">
-                <header>CPU</header>
-                <img src="{%static 'img/cpu.jpg'%}" alt="">
-            </div>
-            <div class="product">
-                <header>Graphics</header>
-                <img src="{%static 'img/gpu.jpg'%}" alt="">
-            </div>
-        </div>
-        <div>
-            <header>
-                <h2>OFFERS</h2>
-            </header>
-            <div class="offers">
+        <div class="offers">
+            {% for item in list %}
+            <a href="{% url 'products:detail_category' item.id %}">
                 <div class="itemOffer">
-                    <img src="{% static '/img/ssd.jpg'%}" alt="" class="img_description">
-                    <div class="price">$120.000</div>
-                    <div class="discount">20%</div>
-                    <div class="description">This is a description</div>
+                    <img src="/media/{{item.path}}" alt="" class="img_description">
+                    <div class="name">{{item.name}}</div>
+                    <div class="price">${{item.price}}</div>
+                    <div class="discount">{{item.discount}}%</div>
                 </div>
-            </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
-    </div>
-</body>
-
-</html>
+</div>
+{% endblock body %}

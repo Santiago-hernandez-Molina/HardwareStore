@@ -1,0 +1,23 @@
+{% extends 'products/masterTemplate.html' %} {% load static%} {% block body %}
+<div class="content">
+    <Header class="product_title">{{item.name}}</Header>
+    <div class="price">
+        <p> ${{item.price}}</p>
+    </div>
+    <div class="discount">
+        <p> {{item.discount}}%</p>
+    </div>
+    <a href="">
+        <div class="buy">BUY</div>
+    </a>
+    <br>
+    <div class="description_img">
+        <img src="/media/{{item.path}}"></img>
+    </div>
+    <div class="description">
+        <p>{{item.description}}</p>
+    </div>
+
+</div>
+
+{% endblock body %}

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
+    'perfiles',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,14 @@ WSGI_APPLICATION = 'Django_003_hardwareStore.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default':{
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME':'hardwareStoreDB',
+        'USER':'postgres',
+        'PASSWORD':'',
+        'HOST':'localhost',
+        'PORT':'5432',
+        }
 }
 
 
@@ -119,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -126,5 +134,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL='login'
-LOGIN_REDIRECT_URL='login'
+LOGIN_REDIRECT_URL='/products'
 LOGOUT_REDIRECT_URL='login'

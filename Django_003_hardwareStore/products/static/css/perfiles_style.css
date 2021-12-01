@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(38, 36, 36);
+}
+
+.container {
+    display: block;
+    align-self: center;
+    text-align: justify;
+    color: white;
+    margin: 10%;
+    background-color: rgb(22, 21, 21);
+    padding: 5%;
+    border: 2px solid black;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container form {
+    font-family: Sspl;
+}
+
+.container input {
+    display: block;
+    background-color: rgb(56, 53, 53);
+    color: white;
+    border: none;
+    padding: 2px;
+}
+
+#submit {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+#submit:hover {
+    background: rgb(56, 53, 53);
+}
+
+@font-face {
+    font-family: Sspl;
+    src: url("../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
+}

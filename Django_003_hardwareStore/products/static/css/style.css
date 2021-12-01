@@ -35,6 +35,11 @@ body {
     border: 2px solid darkgray;
 }
 
+.title {
+    font-size: 2rem;
+    font-family: Rbold;
+}
+
 .user {
     width: 50px;
     height: 50px;
@@ -107,6 +112,10 @@ body {
     display: flex;
 }
 
+.offers a {
+    text-decoration: none;
+}
+
 .itemOffer {
     width: 200px;
     height: 300px;
@@ -115,7 +124,7 @@ body {
     box-shadow: 0px 1px 2px 0px darkgray;
     font-family: Rbold;
     color: darkred;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     overflow-y: hidden;
 }
 
@@ -132,17 +141,53 @@ body {
     border-bottom: 1px solid darkgray;
 }
 
-.discount {
-    margin-bottom: 60px;
-}
-
-.discount:hover {
-    margin-bottom: 10px;
-    transition: 0.3s;
+.name {
+    font-family: Sspl;
+    color: black;
 }
 
 .discount {
     color: green;
+}
+
+.product_title {
+    font-family: Rbold;
+    font-size: 2rem;
+}
+
+.price {
+    color: red;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.description {
+    font-size: 5em;
+    font-family: Sspl;
+    text-align: justify;
+    margin: 5%;
+    text-decoration: none;
+}
+
+.buy {
+    margin: 50px;
+    padding: 50px;
+    background-color: white;
+    font-size: 3em;
+    color: black;
+    transition: 0.5s;
+}
+
+.buy:hover {
+    background-color: black;
+    color: darkgray;
+    transition: 0.5s;
 }
 
 @font-face {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/perfiles_style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sing in</h1>
+        <form method="POST">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" name="submit" id="submit">
+        </form>
+        {% if error %}
+        <h4>{{ error}}</h4>
+        {% endif %}
+        <p>don't have account? Register now</p>
+        <a href="{% url 'sign_up' %}">Registrate</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% extends 'products/masterTemplate.html' %} {% load static%} {% block body %}
+<div class="content">
+    <h1>Registrar producto</h1>
+    <form class="form_product" action="{% url 'products:register_product' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <br>
+        <input name="name" type="text">
+        <br>
+        <label for="">Description</label>
+        <br>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Image</label>
+        <input name="file" type="file">
+        <br>
+        <label for="">Price</label>
+        <input name="price" type="number">
+        <br>
+        <label for="">Discount</label>
+        <input name="discount" type="number">
+        <br>
+        <label for="">Category</label>
+        <select name="category">
+            {%for item in list %}
+            <option value="{{item.id}}">{{item.name}}</option> 
+            {%endfor%}
+         </select>
+        <br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+</div>
+{% endblock body %}
